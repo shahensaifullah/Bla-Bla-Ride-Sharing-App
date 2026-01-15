@@ -1,8 +1,10 @@
 package de.hnu;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(originPatterns = "http://localhost:*")
 @RestController
 public class HelloService {
     
@@ -19,11 +21,6 @@ public class HelloService {
 			return a+b;
 		}
 		return 0;
-	}
-
-	@GetMapping("/hello")
-	public String hello() {
-		return "Hello World From Spring boot server";
 	}
 
 }
